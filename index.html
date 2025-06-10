@@ -1,64 +1,77 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pgina de login</title>
+    <title>Pagina inicial</title>
     <style>
-        body{
-            background-color: rgb(113, 106, 172);
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
+        /*reset o preenchimentos*/
+        *{
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container{
-            background-color: rgb(190, 210, 87);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 20px 30px 20px #3434a7;
+        /*Troca a fonte de todo o corpo do site*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
         }
-        input{
-            padding: 10px;
-            margin: 10px;
-            border: 10px inset rgb(231, 115, 115;
-            font: size 15px;
-            border: radius 15px; ;
-        }
-        button{
-            width: 90px;
-            height: 30px;
-            background-color:black;
-            color:blue;
-            font: size 15px;
-            border: radius 15px;
-            cursor: pointer;
-
-        }
-        button:hover{
-        background-color: beige;
-        color: blue;
-        }
+        /*Deixa organizado o menu superior*/
         .menu{
-            list-style: none;
-            border: 1px solid;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
+            list-style: none;/*Linpar os marcadores padrao da lista UL ou OL' vai tirar as bolinhas da lista*/
+            display: flex;/*Permite que os elementos sejam organizados de maneira flexivel*/
+            justify-content: space-around;/*Distribui os items uniformemente deixando um espaço entre eles*/
+            align-items: center;/*Centraliza verticalmente os elementos*/
+            background-color: rgb(25, 30, 83);/*cor de fundo*/
+            padding: 10px 0;/*Adiciona 10 pixels de espaçamento em cima e em baixo sem mudar as laterais*/
+            position: fixed;/*Fixa o elemtento na tela para não rolar com a pagina*/
+            top: 0;/*Posiciona o elemento na parte superior da tela*/
+            width: 100%;/*Faz com que o elemento oculpe 100% da largura da tela*/
+            z-index: 1000;/*Garrante que os elementos fiquem  acima dos outro itens da tela*/
+        }
 
+    /*Estilo dos items do menu */
+    .menu li{
+        position: relative;
+    }
 
+    .menu li a{
+        color: rgb(16, 119, 31);
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .menu li a:hover{
+        background-color: rgb(21, 97, 163);
+        color: rgb(187, 21, 21);
+    }
+
+    .menu li ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(106, 168, 106);
+        display: none;
+        width: 100px;
+
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>login</h2>
-        <input type="text" placeholder="Email">
-        <br><input type="pessword" placeholder="senha">
-        <br><button>entrar</button>
-
-    </div>
+    <ul class="menu">
+        <li>
+            <a href="#">Inicio</a>
+        <ul>
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Vendas</a></li>
+            <li><a href="#">Trocas</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="login.html">Conta</a></li>
+     </ul>
+</nav>
 </body>
 </html>
