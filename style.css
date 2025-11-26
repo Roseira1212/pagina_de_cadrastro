@@ -1,0 +1,35 @@
+body{
+    background-image: url(sons/image.png);
+}
+.title
+{
+    text-align: center;
+    font-size: 3rem;
+    border-style: groove solid;
+}
+.key{
+
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(253, 156, 204);
+    font-size: 2rem;
+    border: 4px rgb(255, 162, 253)
+    border-radius 100px;
+}
+.key:hover{
+    background-color: rgb(255, 110, 188);
+}
+.container{
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: space-between;
+ gap: 15px;
+
+}
